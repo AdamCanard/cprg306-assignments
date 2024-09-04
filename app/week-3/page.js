@@ -15,6 +15,7 @@ export default function Page() {
         <Image src={Arrow} width={32} height={32} alt="arrow" />
       </Link>
       <div id="border-s" className="flex flex-col w-2/3 h-2/3">
+        <h1 id="header">Shopping List</h1>
         <ItemList />
       </div>
     </div>
