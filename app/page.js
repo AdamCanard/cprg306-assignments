@@ -15,6 +15,7 @@ export default function Home() {
               <Week num={6} />
               <Week num={7} />
               <Week num={8} />
+              <Week num={9} />
             </div>
           </div>
         </div>
