@@ -29,46 +29,162 @@ body {
   background-color: #bababa;
 }
 
-#header {
-  background-color: #6e6e6e;
-  border-top: 2px solid #828282;
-  border-right: 2px solid #828282;
-  border-left: 4px solid #5a5a5a;
-  border-bottom: 4px solid #5a5a5a;
+#title {
+  height: 30px;
+  width: 100%;
   color: white;
-  padding: 2px;
+  background: linear-gradient(90deg, #000080, #1084d0);
+  padding: 3px 2px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0;
+}
+
+#window {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
+  border: 1px black solid;
+  background-color: #bababa;
+}
+
+#window-i {
+  height: 90%;
+  align-items: center;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
+  border: 2px #bababa solid;
+  padding: 4px;
+}
+
+#window-i-nb {
+  height: 100%;
+  align-items: center;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
+  border: 2px #bababa solid;
+  padding: 4px;
+}
+
+#button-i {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  height: 10%;
+}
+
+#button {
+  box-sizing: border-box;
+  border: none;
+  color: transparent;
+  text-shadow: 0 0 #222222;
+  background: #c0c0c0;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
+  border-radius: 0;
+  width: 82px;
+  height: 25px;
+  margin-right: 2px;
+  margin-top: 4px;
+  padding: 0 12px;
+}
+
+#close {
+  padding: 0;
+  display: block;
+  min-width: 16px;
+  min-height: 14px;
+  margin-right: 3px;
+  background-color: #bababa;
+  background-image: url("../public/Windows/close.svg");
+  background-repeat: no-repeat;
+  background-position: top 3px left 4px;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
 }
 
 #border {
-  border-left: 4px solid #969696;
-  border-top: 4px solid #c8c8c8;
-  border-right: 4px solid #c8c8c8;
-  border-bottom: 4px solid #969696;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
   padding: 4px;
   background-color: #bababa;
 }
+
 #border-np {
-  border-left: 4px solid #969696;
-  border-top: 4px solid #c8c8c8;
-  border-right: 4px solid #c8c8c8;
-  border-bottom: 4px solid #969696;
-  background-color: #bababa;
-}
-#border-s {
-  border-left: 2px solid #969696;
-  border-top: 2px solid #c8c8c8;
-  border-right: 2px solid #c8c8c8;
-  border-bottom: 2px solid #969696;
-  padding: 2px;
-  background-color: #bababa;
-}
-#border-s-np {
-  border-left: 2px solid #969696;
-  border-top: 2px solid #c8c8c8;
-  border-right: 2px solid #c8c8c8;
-  border-bottom: 2px solid #969696;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
   background-color: #bababa;
 }
 
-div {
+#border-s {
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #fafafa,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
+  padding: 2px;
+  background-color: #bababa;
+}
+
+html,
+body {
+  overflow-y: hidden;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  background-color: #bababa;
+}
+
+@keyframes roll {
+  from {
+    transform: translate(-100px, 0px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 17px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #dfdfdf;
+}
+
+::-webkit-scrollbar-track {
+  background-image: url("../public/Windows/scrollbar-background.svg");
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bababa;
+  box-shadow: inset 1px -1px #0a0a0a, inset -1px 1px #ffffff,
+    inset 2px -2px #969696, inset -2px 2px #c8c8c8;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment {
+  display: none;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  height: 17px;
+  background-image: url("../public/Windows/button-up.svg");
+}
+::-webkit-scrollbar-button:vertical:end {
+  height: 17px;
+  background-image: url("../public/Windows/button-down.svg");
+}
+::-webkit-scrollbar-button:horizontal:start {
+  width: 16px;
+  background-image: url("../public/Windows/button-left.svg");
+}
+::-webkit-scrollbar-button:horizontal:end {
+  width: 16px;
+  background-image: url("../public/Windows/button-right.svg");
 }

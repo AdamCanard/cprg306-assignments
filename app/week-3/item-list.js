@@ -88,10 +88,15 @@ export function ItemList() {
   ];
 
   return (
-    <div className="w-full h-full grid grid-cols-4 grid-rows-3 ">
-      {list.map((item, index) => {
-        return <Item item={item} key={index} />;
-      })}
+    <div id="window" className="flex flex-col">
+      <h1 id="title">ADAM CUNARD</h1>
+      <div id="window-i-nb">
+        <div className="w-full h-full grid grid-cols-4 grid-rows-3 ">
+          {list.map((item, index) => {
+            return <Item item={item} key={index} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }

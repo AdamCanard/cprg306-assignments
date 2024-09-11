@@ -1,11 +1,14 @@
-import "../globals.css";
+import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import Arrow from "../../public/Arrow.png";
+import Arrow from "../public/Arrow.png";
 
-export default function Page() {
+export default function BasePage({ children }) {
   return (
-    <div id="border" className="flex h-full w-full justify-center items-center">
+    <div
+      id="border"
+      className="flex flex-row h-full w-full justify-center items-center"
+    >
       <Link
         id="border-s"
         className="absolute top-4 left-4 w-8 h-8 "
@@ -13,9 +16,7 @@ export default function Page() {
       >
         <Image src={Arrow} width={32} height={32} alt="arrow" />
       </Link>
-      <div id="border-s" className="flex flex-col w-2/3 h-2/3">
-        <></>
-      </div>
+      {children}
     </div>
   );
 }

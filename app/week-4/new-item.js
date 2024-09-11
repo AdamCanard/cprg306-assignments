@@ -14,29 +14,26 @@ export function NewItem() {
     setQuantity(newQuantity);
   };
   return (
-    <div className="flex w-full h-full justify-center items-center">
-      <div
-        id="header"
-        className="flex flex-row justify-around items-center w-24 h-12 text-center"
-      >
-        <div className="w-full">
+    <div id="window" className="flex w-full h-full justify-center items-center">
+      <div className="flex flex-row justify-around items-center w-24 h-12 text-center">
+        <div id="border">
           <h1>{quantity}</h1>
-        </div>
-        <div className="flex flex-row gap-2 w-full">
-          <div
-            id="border-s-np"
-            className="w-4 h-6 leading-5"
-            onClick={increment}
-          >
-            +
-          </div>
+          <div className="flex flex-row gap-2 w-full">
+            <div
+              id="border"
+              className="w-4 h-6 leading-3 hover:cursor-pointer"
+              onClick={increment}
+            >
+              +
+            </div>
 
-          <div
-            id="border-s-np"
-            className="w-4 h-6 leading-5"
-            onClick={decrement}
-          >
-            -
+            <div
+              id="border"
+              className="w-4 h-6 leading-3 hover:cursor-pointer"
+              onClick={decrement}
+            >
+              -
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 export function Item({ item }) {
   return (
-    <div id="border" className="w-full h-full text-sm">
-      <h1 id="header">{item.name}</h1>
-      <h2>Amount: {item.quantity}</h2>
-      <h2>Category: {item.category}</h2>
+    <div id="window" className="w-full h-full text-sm">
+      <h1 id="title">{item.name}</h1>
+      <div id="border">Amount: {item.quantity}</div>
+      <div id="border">Category: {item.category}</div>
     </div>
   );
 }
